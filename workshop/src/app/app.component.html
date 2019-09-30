@@ -176,7 +176,7 @@
   }
 
   .terminal::before {
-    content: "\2022 \2022 \2022";
+    content: "\2022 \2022 \2022 \2022";
     position: absolute;
     top: 0;
     left: 0;
@@ -417,6 +417,21 @@
     </div>
   </div>
 
+  <button class="btn btn-primary">
+    ajfzejgiezjfgiez
+  </button>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    </div>
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
