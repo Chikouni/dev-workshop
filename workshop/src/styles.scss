@@ -1,4 +1,11 @@
 @import 'variables.scss';
+@import '~material-bottom-nav';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bottom-nav {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  @include bottom-nav(#004EFF, #FFFFFF, #FFFFFF);
+}
