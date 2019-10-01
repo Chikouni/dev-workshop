@@ -13,14 +13,12 @@ export class DefisService {
 
   getDefis(){
     return this.http.get<Defi[]>('https://workshop-4b538.firebaseio.com/defis.json').pipe(map(responseData => {
-        console.log(responseData)
       var usersArray: Defi[] = [];
       for(const key in responseData){
         if(responseData.hasOwnProperty(key)){
           usersArray.push({...responseData[key], id: key})
         }
       }
-      console.log(usersArray);
       return usersArray;
     }))
   }
