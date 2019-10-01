@@ -1,0 +1,30 @@
+footer {
+    background-color: #f1f1f1;
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+     div {
+        width: 25%;
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            li {
+                text-decoration: none;
+                a {
+                    text-decoration: none;
+                    color: $text-primary-color;
+                     &:hover{
+                        color: #464646;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+     }
+    }
+    p {
+        text-align: center;
+    }
+}
