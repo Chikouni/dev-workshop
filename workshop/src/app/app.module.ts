@@ -6,16 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { HeaderComponent } from './global/layouts/header/header.component';
-import { FooterComponent } from './global/layouts/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './global/layouts/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
