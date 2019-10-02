@@ -1,0 +1,141 @@
+.div-button {
+    margin: auto;
+    display: flex;
+    button {
+        @include border-radius(20px);
+        border: 0px;
+        background-color: $text-secondary-color;
+        color: $text-primary-color;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 18px;
+        padding: 8px 55px;
+    }
+}
+
+div.menu-container {
+    .image-menu {
+    background-size: cover;
+    height: 493px;
+    filter: drop-shadow(0px 14px 12px #999);
+    }
+    .items {
+        width: 80%;
+        margin: auto;
+        h1 {
+            color: $text-secondary-color;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        } p {
+            color: $text-secondary-color;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            font-weight: lighter;
+            letter-spacing: 0;
+        }
+    }
+
+    .picto {
+        width: 80%;
+        margin: auto;
+        position: relative;
+    top: -50px;
+        .picto-card {
+            width: 100%;
+            margin: auto;
+            margin-bottom: 42px;
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 73.61px!important;
+                    margin-bottom: 22px;
+            }
+            h3 {
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 0;
+                color: $primary-color;
+                margin-bottom: 5px;
+            }
+            p {
+                text-align: center;
+                font-size: 14px;
+                font-weight: lighter;
+                letter-spacing: 0;
+                color: $text-primary-color;
+            }
+        }
+    }
+    .number {
+        width: 80%;
+        margin: auto;
+        h2 {
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            color: $text-primary-color;
+            text-transform: uppercase;
+        }
+        .data {
+            width: 70%;
+            span {
+                text-align: left;
+                font-size:  50px;
+                color: $primary-color;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+            .blue {
+                text-align: left;
+                font-size:  21px;
+                color: $primary-color;
+                font-weight: bold;
+                display: inline;
+            }
+            .grey {
+                text-align: left;
+                font-size: 14px;
+                font-weight: lighter;
+                letter-spacing: 0;
+                color: $text-primary-color;
+            }
+        }
+    }
+    .challenge {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 98px;
+        p{
+          margin-top : 26px;
+          text-align: center;
+          font-size: 14px;
+          letter-spacing: 0;
+          color: $text-primary-color;
+        }
+    }
+
+    .discover {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: -19px;
+        h2 {
+            text-align: left;
+            font-size: 28px;
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        p {
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0;
+            color: $text-primary-color;
+        }
+    }
+}
