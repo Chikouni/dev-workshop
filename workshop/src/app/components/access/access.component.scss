@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.mat-slide-toggle{
+  padding-top: 30px;
+}

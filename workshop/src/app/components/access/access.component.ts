@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-access',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./access.component.scss']
 })
 export class AccessComponent implements OnInit {
+  email = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    getErrorMessage() {
+      return this.email.hasError('required') ? 'Vous devez rentrer un e-mail' :
+          this.email.hasError('email') ? 'E-mail non valide' :
+              '';
+    }
 
 }
