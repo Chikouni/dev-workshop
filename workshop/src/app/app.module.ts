@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccessComponent } from './components/access/access.component';
 import {MatInputModule} from '@angular/material/input';
+import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatInputModule} from '@angular/material/input';
     HomeComponent,
     MenuComponent,
     DefisComponent,
-    AccessComponent
+    AccessComponent,
+    DetailDefiComponent
   ],
   imports: [
     BrowserModule,
