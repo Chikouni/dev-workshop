@@ -1,19 +1,42 @@
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+  }
+
 .cards {
     width: 90%;
     margin: auto;
     margin-top: 30px;
     div.card {
       margin-bottom: 20px;
-      border-radius: 0px;
       border: 0px;
       position: relative;
+      @include border-radius(20px);
       .card-img {
-        border-radius: 0px;
+        @include border-radius(20px);
       }
+      .card-img-overlay {
+        @include border-radius(20px);
         .card-title {
             position: absolute;
             left: 43%;
             top: 47%;
-          }
     }
+    }
+    }
+}
+
+.card-btn {
+ margin: auto;
+ display: flex;
+  button.btn-primary {
+    background: $primary-color;
+    color: $text-secondary-color;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    @include border-radius(20px);
+}
 }

@@ -1,10 +1,15 @@
 <img class="logo" src="./../../../assets/images/logo-blue.png">
 <div class="cards">
     <div *ngFor="let defi of defis; let i = index" class="card text-white">
+        <a [routerLink]="['/defis', i]">
         <img src="{{ defi.image }}" class="card-img" alt="...">
         <div class="card-img-overlay" [ngStyle]="{'background-color': condition ? 'rgba(0, 76, 255, 0.623)' : '#707070a8' }">
-          <h5 class="card-title" [ngStyle]="{'color': condition ? '#ffffff' : 'darkgray' }">DEFI 1</h5>
+          <h5 class="card-title" [ngStyle]="{'color': condition ? '#ffffff' : 'darkgray' }">DEFI {{ i + 1 }}</h5>
         </div>
+    </a>
       </div>
 </div>
+<div class="card-btn">
+        <button [disabled]="!condition" class="btn btn-primary">Completer le quiz</button>
+    </div>
 
