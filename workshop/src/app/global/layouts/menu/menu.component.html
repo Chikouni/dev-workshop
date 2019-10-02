@@ -19,10 +19,10 @@
 </nav>
 <div id="myNav" class="overlay" *ngIf='menuToggle'>
   <div class="overlay-content">
-    <a [routerLink]="['/']">Caeli</a>
-    <a [routerLink]="['/about']">Nos engagements</a>
-    <a [routerLink]="['/actus']">Actus</a>
-    <a [routerLink]="['/contact']">Contact</a>
+    <a [routerLink]="['/']" (click)="burgerMenu()" >Caeli</a>
+    <a [routerLink]="['/about']" (click)="burgerMenu()" >Nos engagements</a>
+    <a [routerLink]="['/actus']" (click)="burgerMenu()" >Actus</a>
+    <a [routerLink]="['/contact']" (click)="burgerMenu()" >Contact</a>
   </div>
   <a class="closebtn" (click)="burgerMenu()">&times;</a>
 </div>
