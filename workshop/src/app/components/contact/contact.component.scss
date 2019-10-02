@@ -1,0 +1,37 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+div.menu-container .image-menu{
+  height: 290px !important;
+  background-position: bottom;
+}
+.picto{
+  top: 50px !important;
+}
+.picto-card{
+  margin-bottom: Opx !important;
+}
+p{
+ text-align: initial !important;
+}
+.mat-form-field-infix{
+  border: #004EFF 2px solid !important;
+}
+.mat-form-field{
+  width: 100%;
+}
+.div-button {
+    margin: auto;
+    display: flex;
+    padding-bottom: 100px !important;
+    button {
+        border-radius: 20px;
+        border: 0px;
+        background-color: #004EFF;
+        color: #FFFFFF;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 18px;
+        padding: 8px 55px;
+    }
+}
