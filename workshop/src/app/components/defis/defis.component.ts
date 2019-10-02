@@ -9,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefisComponent implements OnInit {
 defis: Defi[] = []
+condition = false;
 
   constructor( private defisService: DefisService) {}
 
   ngOnInit() {
     this.defisService.getDefis().subscribe(defis => {
       this.defis = defis;
+      console.log(this.defis);
     })
   }
 
