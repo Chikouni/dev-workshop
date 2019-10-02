@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'assets/scss/cards.scss';
 @import 'assets/scss/layouts.scss';
+@import 'assets/scss/menu.scss';
 @import '~material-bottom-nav';
 @import '~@angular/material/theming';
 @import './material-theme';
@@ -13,7 +14,7 @@ $myProject-theme: mat-light-theme($myProject-primary, $myProject-accent, $myProj
 @include angular-material-theme($myProject-theme);
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Montserrat', sans-serif!important;}
 
 .bottom-nav {
   border-top-right-radius: 30px;
