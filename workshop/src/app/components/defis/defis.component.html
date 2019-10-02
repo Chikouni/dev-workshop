@@ -1,11 +1,11 @@
 <img class="logo" src="./../../../assets/images/logo-blue.png">
 <hr class="hr">
-<div class="cards">
+<div class="cards disabled" [class.disabled]="condition">
     <div *ngFor="let defi of defis; let i = index" class="card text-white">
         <a [routerLink]="['/defis', i]">
         <img src="{{ defi.image }}" class="card-img" alt="...">
-        <div class="card-img-overlay" [ngStyle]="{'background-color': condition ? 'rgba(0, 76, 255, 0.623)' : '#707070a8' }">
-          <h5 class="card-title" [ngStyle]="{'color': condition ? '#ffffff' : 'darkgray' }">DEFI {{ i + 1 }}</h5>
+        <div class="card-img-overlay">
+          <h5 class="card-title">DEFI {{ i + 1 }}</h5>
         </div>
     </a>
       </div>

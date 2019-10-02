@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefisComponent implements OnInit {
 defis: Defi[] = []
-condition = true;
+condition = false;
 
   constructor( private defisService: DefisService) {}
 

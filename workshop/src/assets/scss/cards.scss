@@ -27,16 +27,28 @@
       }
       .card-img-overlay {
         @include border-radius(20px);
+        background-color:rgba(0, 76, 255, 0.623);
         .card-title {
-            // position: absolute;
-            // left: 43%;
-            // top: 47%;
+            margin-top: 21%;
+            text-align: center;
             font-size: 52px;
             font-weight: bold;
             color: $text-secondary-color;
     }
     }
     }
+}
+
+.cards.disabled {
+  div.card {
+    .card-img-overlay {
+      @include border-radius(20px);
+      background-color: #707070a8;
+      .card-title {
+          color: $text-primary-color;
+  }
+  }
+  }
 }
 
 .card-btn {
