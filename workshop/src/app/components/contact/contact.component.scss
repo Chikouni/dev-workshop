@@ -1,0 +1,16 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+div.menu-container .image-menu{
+  height: 290px !important;
+  background-position: bottom;
+}
+.mat-form-field-infix{
+  border: #004EFF 2px solid ;
+}
+.mat-form-field{
+  width: 100%;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline{
+  color: #004EFF !important;
+}
