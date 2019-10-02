@@ -15,6 +15,7 @@ import { AccessComponent } from './components/access/access.component';
 import { MatInputModule } from '@angular/material/input';
 import { DemoMaterialModule } from './material-module';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     HomeComponent,
     MenuComponent,
     DefisComponent,
-    AccessComponent
+    AccessComponent,
+    DetailDefiComponent
   ],
   imports: [
     BrowserModule,
