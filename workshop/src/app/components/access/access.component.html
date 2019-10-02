@@ -1,11 +1,15 @@
 <img class="logo" src="./../../../assets/images/logo-blue.png">
 <div class="example-container">
+  <form>
   <mat-form-field>
-    <input matInput placeholder="Prénom" required>
+    <input matInput placeholder="Prénom" [formControl]="name" required>
+    <mat-error *ngIf="name.invalid">{{getErrorMessage2()}}</mat-error>
   </mat-form-field>
   <mat-form-field>
     <input matInput placeholder="E-mail" [formControl]="email" required>
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
-  <mat-slide-toggle>J'ai pris connaissance de la <br><a href="#">Politique de confidentialité</a></mat-slide-toggle>
+  <mat-slide-toggle style="color: #707070;" [formControl]="toggle">J'ai pris connaissance de la <br><a href="#">Politique de confidentialité</a></mat-slide-toggle>
+  </form>
+  <button type="submit" (click)="onSubmit()" mat-raised-button color="primary">Valider</button>
 </div>

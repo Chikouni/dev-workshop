@@ -5,10 +5,10 @@
 @import '~@angular/material/theming';
 @import './material-theme';
 @include mat-core();
-$myProject-primary: mat-palette($md-caeli, 600);
-$myProject-accent: mat-palette($md-caeli, 600);
-$myProject-warn: mat-palette($md-caeli, 600);
-$myProject-foreground: mat-palette($md-caeli, 600);
+$myProject-primary: mat-palette($md-caeli, 500);
+$myProject-accent: mat-palette($md-caeli, 500);
+$myProject-warn: mat-palette($md-caeli, 500);
+$myProject-foreground: mat-palette($md-caeli, 500);
 $myProject-theme: mat-light-theme($myProject-primary, $myProject-accent, $myProject-warn);
 @include angular-material-theme($myProject-theme);
 
