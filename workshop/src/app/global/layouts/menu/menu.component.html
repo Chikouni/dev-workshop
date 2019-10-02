@@ -1,19 +1,28 @@
 <nav class="bottom-nav">
-  <a class="bottom-nav__action" href="#">
+  <a class="bottom-nav__action" [routerLink]="['/access']">
     <svg class="bottom-nav__icon" viewBox="0 0 24 24">
       <path d="M11,7V12.11L15.71,14.9L16.5,13.62L12.5,11.25V7M12.5,2C8.97,2 5.91,3.92 4.27,6.77L2,4.5V11H8.5L5.75,8.25C6.96,5.73 9.5,4 12.5,4A7.5,7.5 0 0,1 20,11.5A7.5,7.5 0 0,1 12.5,19C9.23,19 6.47,16.91 5.44,14H3.34C4.44,18.03 8.11,21 12.5,21C17.74,21 22,16.75 22,11.5A9.5,9.5 0 0,0 12.5,2Z"></path>
     </svg>
   </a>
 
-  <a class="bottom-nav__action" href="#">
-    <svg class="bottom-nav__icon" viewBox="0 0 24 24">
-      <path fill="#000000" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+  <a class="bottom-nav__action" [routerLink]="['/']">
+    <svg id="Calque_1" class="bottom-nav__icon" viewBox="0 0 83.9 119.25">
+      <path class="cls-1" d="M189,203.48c0-.26.06-.5.07-.76a19.3,19.3,0,0,1-10.29,2.92c-6.25,0-11.36-2.31-14.66-6.11-4.44-4.93-5.76-10.54-5.76-33.09s1.32-28.17,5.76-33.12c3.3-3.78,8.41-6.09,14.66-6.09,11.11,0,16.93,6.78,19.41,15.67,6-4.92,12.62-7.44,21.17-8.3-6.47-18.39-21.8-27.79-40.74-27.79-12.85,0-23.39,4.61-31.62,12.85-11.86,11.85-11.54,26.51-11.54,46.78s-.32,34.92,11.54,46.77c8.23,8.24,18.77,12.85,31.62,12.85a48.12,48.12,0,0,0,16.67-2.91A32.24,32.24,0,0,1,189,203.48Z" transform="translate(-135.42 -106.81)"/>
     </svg>
   </a>
 
-  <a class="bottom-nav__action" href="#">
+  <a class="bottom-nav__action" (click)="burgerMenu()" style="color:#FFFFFF;">
     <svg class="bottom-nav__icon" viewBox="0 0 24 24">
-      <path fill="#000000" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+      <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
     </svg>
   </a>
 </nav>
+<div id="myNav" class="overlay" *ngIf='menuToggle'>
+  <div class="overlay-content">
+    <a [routerLink]="['/']">Caeli</a>
+    <a [routerLink]="['/about']">Qui sommes-nous ?</a>
+    <a [routerLink]="['/blog']">Blog</a>
+    <a [routerLink]="['/contact']">Contact</a>
+  </div>
+  <a class="closebtn" (click)="burgerMenu()">&times;</a>
+</div>

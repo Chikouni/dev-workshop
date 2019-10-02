@@ -12,7 +12,9 @@ import { DefisComponent } from './components/defis/defis.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccessComponent } from './components/access/access.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { DemoMaterialModule } from './material-module';
+import { MatNativeDateModule } from '@angular/material/core';
 import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.component';
 
 @NgModule({
@@ -33,7 +35,9 @@ import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    DemoMaterialModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

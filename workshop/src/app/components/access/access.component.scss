@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.mat-slide-toggle{
+  padding-top: 30px;
+}
+input {
+    color: #707070;
+}
+button{
+  border-radius: 20px;
+  width: 188px !important;
+  margin: auto;
+  margin-top: 100px !important;
+}

@@ -2,6 +2,15 @@
 @import 'assets/scss/cards.scss';
 @import 'assets/scss/layouts.scss';
 @import '~material-bottom-nav';
+@import '~@angular/material/theming';
+@import './material-theme';
+@include mat-core();
+$myProject-primary: mat-palette($md-caeli, 500);
+$myProject-accent: mat-palette($md-caeli, 500);
+$myProject-warn: mat-palette($md-caeli, 500);
+$myProject-foreground: mat-palette($md-caeli, 500);
+$myProject-theme: mat-light-theme($myProject-primary, $myProject-accent, $myProject-warn);
+@include angular-material-theme($myProject-theme);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
