@@ -20,4 +20,5 @@ body { margin: 0; font-family: 'Montserrat', sans-serif!important;}
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   @include bottom-nav(#004EFF, #FFFFFF, #FFFFFF);
+  height: 60px;
 }
