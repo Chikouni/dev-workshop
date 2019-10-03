@@ -13,6 +13,7 @@ export class DetailDefiSuccessComponent implements OnInit {
   private userData = localStorage.getItem('caeliUserData');
   private
   currentLevel = 0;
+  newVariable: any = window.navigator;
 
   constructor(private route: ActivatedRoute, private defisService: DefisService) {}
 
@@ -30,5 +31,17 @@ export class DetailDefiSuccessComponent implements OnInit {
       level: this.currentLevel.toString()
     };
     localStorage.setItem('caeliUserData', JSON.stringify(newScore));
+  }
+  shareIt(){
+    if (this.newVariable.share) {
+      this.newVariable.share({
+        title: this.defi.titre,
+        text: this.defi.tooltip,
+        url: this.route.url
+      })
+    }
+    else {
+      console.log('web share not supported');
+    }
   }
 }
