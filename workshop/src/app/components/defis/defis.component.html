@@ -2,7 +2,7 @@
 
 <hr class="hr">
 <div class="cards disabled" [class.disabled]="condition">
-    <div *ngFor="let defi of defis; let i = index" class="card text-white" [ngClass]="{'disabled': (i+1) > currentLvl}">
+    <div *ngFor="let defi of defis; let i = index" class="card text-white" [ngClass]="{'disabled': i > currentLvl}">
         <a [routerLink]="['/defis', i]">
         <img src="./../../../assets/images/{{ defi.image }}" class="card-img" alt="...">
         <div class="card-img-overlay">

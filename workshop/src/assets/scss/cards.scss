@@ -44,6 +44,8 @@
 }
 
 .disabled {
+  pointer-events: none;
+  cursor: default;
     .card-img-overlay {
       @include border-radius(20px);
       background-color: #707070a8 !important;
