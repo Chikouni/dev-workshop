@@ -1,0 +1,22 @@
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  background-color: #004EFF;
+  transition: 0.5s;
+}
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+  color: #FFFFFF;
+}
+.defi-detail{
+  border-radius: 20px;
+}

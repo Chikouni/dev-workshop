@@ -12,6 +12,7 @@ defis: Defi[] = []
 condition = false;
 userData = localStorage.getItem('caeliUserData');
 currentLvl: number = JSON.parse(this.userData).level;
+width = 39 ;
 
   constructor( private defisService: DefisService) {}
 
@@ -19,6 +20,9 @@ currentLvl: number = JSON.parse(this.userData).level;
     this.defisService.getDefis().subscribe(defis => {
       this.defis = defis;
     })
+    if(this.currentLvl > 1){
+      this.width = this.currentLvl*33;
+    }
   }
 
 

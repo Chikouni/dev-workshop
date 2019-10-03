@@ -1,6 +1,6 @@
 <img class="logo" src="./../../../assets/images/logo-bleu.jpg">
 
-<hr class="hr">
+<hr class="hr" [style.width.px]="width">
 <div class="cards disabled" [class.disabled]="condition">
     <div *ngFor="let defi of defis; let i = index" class="card text-white" [ngClass]="{'disabled': i > currentLvl}" style="margin-bottom: 42px;">
         <a [routerLink]="['/defis', i]">
@@ -12,3 +12,12 @@
       </div>
 </div>
 <hr style="height: 58px; width: 0px">
+<div *ngIf="currentLvl == 12" class="overlay">
+    <div class="overlay-content">
+      <p>Félicitation vous êtes allez au bout de votre challenge et avez relevé tous les défis !<br>Pour être sûr que tous ces défis ont bien été respectés et que vous avez bien compris leurs enjeux nous vous proposons un petit quiz rapide de 10 questions !
+<br>Alors c’est parti, montrez-nous de quoi vous êtes capables !
+Ps : Si tu obtiens un score correcte, une surprise s’y trouve à la fin...
+</p>
+      <button class="btn-primary defi-detail" style="color: #004EFF; background-color: white; border-color: white;" routerLink="/quizz">Accéder au quiz</button>
+    </div>
+</div>
