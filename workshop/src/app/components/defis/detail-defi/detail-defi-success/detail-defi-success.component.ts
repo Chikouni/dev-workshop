@@ -11,7 +11,6 @@ export class DetailDefiSuccessComponent implements OnInit {
   id: number;
   defi: Defi;
   private userData = localStorage.getItem('caeliUserData');
-  private
   currentLevel = 0;
   newVariable: any = window.navigator;
 

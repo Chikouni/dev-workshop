@@ -161,6 +161,7 @@ export class QuizzComponent implements OnInit {
           }
         }
       );
+      this.score += 1;
       this.isShow = true;
       console.log('score' + this.score);
       console.log(this.userData);

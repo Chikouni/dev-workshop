@@ -1,4 +1,4 @@
-<form [formGroup]="allResponse" *ngIf="isShow">
+<form [formGroup]="allResponse" *ngIf="!isShow">
 <div class="col-md-12 pt-5 pb-5 quizz-container">
 <div *ngFor="let question of questions">
   <div class="col-md-8">
@@ -15,7 +15,7 @@
   </div>
 </div>
 </form>
-<div class="result" *ngIf="!isShow">
+<div class="result" *ngIf="isShow">
     <div style="background-image: url('./../../../assets/images/page-score.jpg'); background-image: url(./../../../assets/images/page-score.jpg);
     height: 368.3px;
     background-size: 378px;">
@@ -41,4 +41,3 @@
   </div>
     </div>
 </div>
-
