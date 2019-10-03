@@ -1,9 +1,19 @@
 .actu-title{
   font-size: 18px;
   text-align: center;
-  font: Bold 18px/20px Montserrat;
+  font-size: 18px;
+  font-weight: bold;
   text-transform: uppercase;
+  padding-top: 12px;
 }
+
+.span-actus {
+  text-align: center;
+font-size: 14px;
+letter-spacing: 0;
+color: #FFFFFF;
+}
+
 .actu-image{
   height: 180px;
   background-repeat: round;
