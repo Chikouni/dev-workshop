@@ -21,6 +21,7 @@ import { ActusComponent } from './components/actus/actus.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DetailDefiSuccessComponent } from './components/defis/detail-defi/detail-defi-success/detail-defi-success.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
+import { QuizzRewardComponent } from './components/quizz/quizz-reward/quizz-reward.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { QuizzComponent } from './components/quizz/quizz.component';
     ActusComponent,
     QuizzComponent,
     ContactComponent,
-    DetailDefiSuccessComponent
+    DetailDefiSuccessComponent,
+    QuizzRewardComponent
   ],
   imports: [
     BrowserModule,

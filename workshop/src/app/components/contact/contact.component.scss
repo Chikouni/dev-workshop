@@ -14,3 +14,24 @@ div.menu-container .image-menu{
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline{
   color: #004EFF !important;
 }
+
+form {
+  h2 {
+    text-align: left;
+font-weight: Bold;
+font-size: 24px;
+letter-spacing: 0;
+color: #004EFF;
+margin-bottom: 20px;
+  }
+  input, select, textarea {
+
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #004EFF;
+border-radius: 20px;
+  
+  }
+  .form-control {
+    color: #707070;
+  }
+}

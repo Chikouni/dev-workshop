@@ -1,3 +1,4 @@
+import { QuizzRewardComponent } from './components/quizz/quizz-reward/quizz-reward.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'quizz', component: QuizzComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'quizz/reward', component: QuizzRewardComponent },
   { path: 'actus', component: ActusComponent }
 ];
 
