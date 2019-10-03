@@ -1,4 +1,4 @@
-<form [formGroup]="allResponse" *ngIf="!isShow">
+<form [formGroup]="allResponse" *ngIf="isShow">
 <div class="col-md-12 pt-5 pb-5 quizz-container">
 <div *ngFor="let question of questions">
   <div class="col-md-8">
@@ -15,7 +15,27 @@
   </div>
 </div>
 </form>
-<div class="result" *ngIf="isShow">
-  <h1>BIEN OUEJ</h1>
-  <p>Votre score est de : {{score}}/10</p>
+<div class="result" *ngIf="!isShow">
+    <div style="background-image: url('./../../../assets/images/page-score.jpg'); background-image: url(./../../../assets/images/page-score.jpg);
+    height: 368.3px;
+    background-size: 378px;">
+      <img class="logo" src="./../../../assets/images/logo-white.png">
+      <h1>Votre socre</h1>
+      <div *ngIf="score == 10" class="score">
+          <p>{{score}}</p><hr><p style="position: absolute;
+          top: 229px;
+          font-size: 35px;
+          right: 112px;">10</p>
+      </div>
+      <div *ngIf="score !== 10" class="score">
+          <p>{{score}}</p><hr style="left: 170px;"><p style="position: absolute;
+          top: 229px;
+          font-size: 35px;
+          right: 127px;">10</p>
+      </div>
+      <div class="greytext">
+       <p>Félicitation pour ton score ! Les 3 mois de défis se sont maintenant écoulés, la planète et nous même te remercions d’avoir participé à la préservation de notre environnement en luttant contre le gaspillage de l’eau et en adoptant des habitudes plus écologiques au quotidien.</p>
+      </div>
+    </div>
 </div>
+
