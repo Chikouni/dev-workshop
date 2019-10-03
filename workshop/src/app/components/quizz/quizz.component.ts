@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-quizz',
@@ -7,17 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizzComponent implements OnInit {
   questions:any;
-  currentIndex:number;
+  iterate:number = 0;
   notAttempted:any;
   correct:any;
-  currentQuestionSet:any;
-  start=false;
-  gameover=false;
-  buttonname="Play";
+  isShow:boolean = false;
+  score:number = 0;
+  userData = localStorage.getItem('caeliUserData');
+  allResponse = new FormGroup({
+    ans1: new FormControl(''),
+    ans2: new FormControl(''),
+    ans3: new FormControl(''),
+    ans4: new FormControl(''),
+    ans5: new FormControl(''),
+    ans6: new FormControl(''),
+    ans7: new FormControl(''),
+    ans8: new FormControl(''),
+    ans9: new FormControl(''),
+    ans10: new FormControl('')
+  });
   constructor(){
      this.questions=[
        {
          id:1,
+         letter:'ans1',
          question:'Quelle est la meilleure période pour arroser ses plantes ?',
          option:[
            {optionid:1,name:"L'après midi"},
@@ -29,6 +42,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:2,
+         letter:'ans2',
          question:'Une douche de 5 minutes représente combien de litres d’eau dépensés ? ',
          option:[
            {optionid:1,name:'80 litres'},
@@ -40,6 +54,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:3,
+         letter:'ans3',
          question:'Laisser un robinet ouvert lors du brossage des dents entraîne la perte de :',
          option:[
            {optionid:1,name:'Entre 0 et 1 litre d’eau '},
@@ -51,6 +66,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:4,
+         letter:'ans4',
          question:'En réparant la fuite d’eau d’un robinet j’économise par jours :',
          option:[
            {optionid:1,name:'10 litres d’eau'},
@@ -62,6 +78,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:5,
+         letter:'ans5',
          question:'La création d’une bouteille en plastique nécessite environ :',
          option:[
            {optionid:1,name:'3 litres d’eau et 30 cl de pétrole'},
@@ -73,6 +90,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:6,
+         letter:'ans6',
          question:'Si je répare une fuite d’eau de toilettes, par an je peux économiser jusqu’à :',
          option:[
            {optionid:1,name:'8 €'},
@@ -84,6 +102,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:7,
+         letter:'ans7',
          question:'Pour l’utilisation des appareils électroménagers il est préférable d’utiliser le mode :',
          option:[
            {optionid:1,name:'Rapide'},
@@ -95,6 +114,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:8,
+         letter:'ans8',
          question:'Combien de litres d’eau je dépense en prenant un bain ?',
          option:[
            {optionid:1,name:'160 litres'},
@@ -106,6 +126,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:9,
+         letter:'ans9',
          question:'Quel est le temps idéal d’une douche sans trop consommer d’eau ?',
          option:[
            {optionid:1,name:'5 minutes'},
@@ -117,6 +138,7 @@ export class QuizzComponent implements OnInit {
        },
        {
          id:10,
+         letter:'ans10',
          question:'Comment décririez-vous votre expérience avec Caeli ? :',
          option:[
            {optionid:1,name:'J’ai adoré, j’ai découvert de bons conseils !'},
@@ -127,40 +149,22 @@ export class QuizzComponent implements OnInit {
          selected:0
        },
      ];
-
-     this.currentIndex=0;
-     this.currentQuestionSet= this.questions[this.currentIndex];
    }
-
-    next(){
-      this.currentIndex = this.currentIndex + 1;
-      this.currentQuestionSet= this.questions[this.currentIndex];
-    }
     submit(){
-      this.buttonname="Replay";
-      if(this.currentIndex+1==this.questions.length){
-         this.gameover=true;
-         this.start=false;
-           this.correct=0;
-      this.notAttempted=0;
-      this.questions.map(x=>{
-          if(x.selected!=0){
-            if(x.selected == x.answer)
-              this.correct=this.correct + 1;
+      Object.entries(this.allResponse.value).forEach(
+        ([key, value]) => {
+          if(value == this.questions[this.iterate].answer){
+            this.score += 1;
+            this.iterate += 1;
           }
           else{
-            this.notAttempted=this.notAttempted + 1;
+            this.iterate += 1;
           }
-          x.selected=0;
-      });
-      }
-
-
+        }
+      );
+      this.isShow = true;
+      console.log('score' + this.score);
+      console.log(this.userData);
     }
-    startQuiz(){
-      this.gameover=false;
-      this.currentIndex=0;
-     this.currentQuestionSet= this.questions[this.currentIndex];
-        this.start=true;
-    }
+    ngOnInit(){}
   }
