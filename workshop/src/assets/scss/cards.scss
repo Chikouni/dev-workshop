@@ -43,15 +43,13 @@
     }
 }
 
-.cards.disabled {
-  div.card {
+.disabled {
     .card-img-overlay {
       @include border-radius(20px);
-      background-color: #707070a8;
+      background-color: #707070a8 !important;
       .card-title {
-          color: $text-primary-color;
-  }
-  }
+          color: $text-primary-color !important;
+      }
   }
 }
 

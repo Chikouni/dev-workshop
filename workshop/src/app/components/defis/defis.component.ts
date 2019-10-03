@@ -10,13 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class DefisComponent implements OnInit {
 defis: Defi[] = []
 condition = false;
+userData = localStorage.getItem('caeliUserData');
+currentLvl: number = JSON.parse(this.userData).level;
 
   constructor( private defisService: DefisService) {}
 
   ngOnInit() {
     this.defisService.getDefis().subscribe(defis => {
       this.defis = defis;
-      console.log(this.defis);
     })
   }
 
