@@ -1,0 +1,21 @@
+<form [formGroup]="allResponse" *ngIf="!isShow">
+<div class="col-md-12 pt-5 pb-5 quizz-container">
+<div *ngFor="let question of questions">
+  <div class="col-md-8">
+    <h5><span style="color:#004EFF;">{{question.id}}. </span> {{question.question}}</h5>
+  <div class="response">
+    <div *ngFor="let o of question.option">
+      <label><input type="radio" name="{{question.letter}}" class="form-radio" value="{{o.optionid}}" [(ngModel)]="question.selected" formControlName="{{question.letter}}" />{{o.name}}</label>
+    </div>
+    </div>
+  </div>
+</div>
+  <div class="div-button">
+    <button style="color:white; margin-top: 9px!important; background-color: #004EFF;" class="btn btn-secondary" (click)="submit()">Valider</button>
+  </div>
+</div>
+</form>
+<div class="result" *ngIf="isShow">
+  <h1>BIEN OUEJ</h1>
+  <p>Votre score est de : {{score}}/10</p>
+</div>
