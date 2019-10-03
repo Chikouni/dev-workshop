@@ -1,7 +1,6 @@
 <img class="logo" src="./../../../assets/images/logo-bleu.jpg">
-
-<hr class="hr" [style.width.px]="width">
 <div class="cards disabled" [class.disabled]="condition">
+  <ngb-progressbar value="{{width}}" type="info" style="margin-bottom: 30px;"></ngb-progressbar>
     <div *ngFor="let defi of defis; let i = index" class="card text-white" [ngClass]="{'disabled': i > currentLvl}" style="margin-bottom: 42px;">
         <a [routerLink]="['/defis', i]">
         <img src="./../../../assets/images/{{ defi.image }}" class="card-img" alt="...">
