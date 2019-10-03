@@ -20,6 +20,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ActusComponent } from './components/actus/actus.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DetailDefiSuccessComponent } from './components/defis/detail-defi/detail-defi-success/detail-defi-success.component';
+import { QuizzComponent } from './components/quizz/quizz.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DetailDefiSuccessComponent } from './components/defis/detail-defi/detai
     DetailDefiComponent,
     AboutComponent,
     ActusComponent,
+    QuizzComponent
     ContactComponent,
     DetailDefiSuccessComponent
   ],
