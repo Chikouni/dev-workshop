@@ -1,5 +1,10 @@
-<div>
-<h1>{{ defi.titre }}</h1>
-<p>{{ defi.description }}</p>
-<p>{{ defi.tooltip1 }}</p>
+
+<div [ngStyle]="{'background-image': 'url(' + './../../../assets/images/' + defi.imageDetail + ')'}" style="height: 497.5px; background-size: 376px;   margin-bottom: 10%;">
+<div class="card-detail">
+        <h2>{{ defi.titre }}</h2>
+        <p>{{ defi.description }}</p>
 </div>
+</div>
+<div class="card-btn">
+        <button class="btn-primary defi-detail" [routerLink]="['/defis', id, 'success']">J'ai réussi</button>
+    </div>

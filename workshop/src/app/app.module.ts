@@ -19,6 +19,7 @@ import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.
 import { AboutComponent } from './components/about/about.component';
 import { ActusComponent } from './components/actus/actus.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DetailDefiSuccessComponent } from './components/defis/detail-defi/detail-defi-success/detail-defi-success.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactComponent } from './components/contact/contact.component';
     DetailDefiComponent,
     AboutComponent,
     ActusComponent,
-    ContactComponent
+    ContactComponent,
+    DetailDefiSuccessComponent
   ],
   imports: [
     BrowserModule,

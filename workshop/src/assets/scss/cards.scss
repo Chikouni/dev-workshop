@@ -21,15 +21,19 @@
       margin-bottom: 20px;
       border: 0px;
       position: relative;
+      width: 294px;
+    height: 219px;
       @include border-radius(20px);
       .card-img {
         @include border-radius(20px);
+        width: 294px;
+    height: 219px;
       }
       .card-img-overlay {
         @include border-radius(20px);
         background-color:rgba(0, 76, 255, 0.623);
         .card-title {
-            margin-top: 21%;
+            margin-top: 25%;
             text-align: center;
             font-size: 52px;
             font-weight: bold;
@@ -61,5 +65,33 @@
     margin-right: auto;
     padding: 8px;
     @include border-radius(20px);
+    border-color: $primary-color;
 }
+}
+
+.card-detail {
+  width: 80%;
+  margin: auto;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0;
+    color: $text-secondary-color;
+    padding-top: 49px;
+  }
+  p {
+    text-align: left;
+    letter-spacing: 0;
+    color: $text-secondary-color;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+
+button.defi-detail {
+  font-size: 12px;
+  font-size: 16px;
+  font-weight: lighter;
+    padding: 8px 50px 8px 50px!important;
 }

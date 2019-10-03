@@ -7,14 +7,16 @@ import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.
 import { ActusComponent } from './components/actus/actus.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { DetailDefiSuccessComponent } from './components/defis/detail-defi/detail-defi-success/detail-defi-success.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
   { path: 'defis', component: DefisComponent},
   { path: 'defis/:id', component: DetailDefiComponent },
+  { path: 'defis/:id/success', component: DetailDefiSuccessComponent },
   { path: 'access', component: AccessComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'actus', component: ActusComponent },
+  { path: 'blog', component: ActusComponent },
   { path: 'about', component: AboutComponent }
 ];
 

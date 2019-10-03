@@ -125,14 +125,15 @@ div.menu-container {
         width: 80%;
         margin: auto;
         position: relative;
-        top: -19px;
+        top: -14px;
         padding-bottom: 90px;
         h2 {
             text-align: left;
-            font-size: 28px;
-            color: $primary-color;
-            text-transform: uppercase;
-            font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 5px;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
         }
         p {
             text-align: left;

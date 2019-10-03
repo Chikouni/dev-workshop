@@ -26,11 +26,12 @@ a:hover{
   color: #FFFFFF;
   display: block;
   transition: 0.3s;
+  font-weight: bold;
 }
 .closebtn{
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: -40px;
+  right: 4px;
   padding-right: 36px !important;
   padding-bottom: 26px !important;
   font-size: 60px !important;

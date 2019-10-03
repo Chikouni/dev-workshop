@@ -21,10 +21,4 @@ defi: Defi;
       console.log(this.defi);
     })
   }
-
-
-
-
-
-
 }

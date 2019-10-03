@@ -1,16 +1,15 @@
-<img class="logo" src="./../../../assets/images/logo-blue.png">
+<img class="logo" src="./../../../assets/images/logo-bleu.jpg">
+
 <hr class="hr">
 <div class="cards disabled" [class.disabled]="condition">
     <div *ngFor="let defi of defis; let i = index" class="card text-white">
         <a [routerLink]="['/defis', i]">
-        <img src="{{ defi.image }}" class="card-img" alt="...">
+        <img src="./../../../assets/images/{{ defi.image }}" class="card-img" alt="...">
         <div class="card-img-overlay">
           <h5 class="card-title">DEFI {{ i + 1 }}</h5>
         </div>
     </a>
       </div>
 </div>
-<div class="card-btn">
-        <button [disabled]="!condition" class="btn btn-primary">Completer le quiz</button>
-    </div>
+<hr style="height: 58px; width: 0px">
 

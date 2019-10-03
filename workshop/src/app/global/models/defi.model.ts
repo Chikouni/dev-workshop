@@ -1,9 +1,8 @@
 export class Defi {
-     image: string;
      titre: string;
      description: string;
+     image: string;
+     imageDetail: string;
      id?: string;
-     tooltip1?: string;
-     tooltip2?: string;
-     tooltip3?: string;
+     tooltip: string;
 }
