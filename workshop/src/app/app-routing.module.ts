@@ -7,6 +7,7 @@ import { DetailDefiComponent } from './components/defis/detail-defi/detail-defi.
 import { ActusComponent } from './components/actus/actus.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { QuizzComponent } from './components/quizz/quizz.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'access', component: AccessComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'actus', component: ActusComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'quizz', component: QuizzComponent }
 ];
 
 @NgModule({
