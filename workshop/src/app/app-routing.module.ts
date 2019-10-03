@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'defis/:id/success', component: DetailDefiSuccessComponent },
   { path: 'access', component: AccessComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'quizz', component: QuizzComponent }
+  { path: 'quizz', component: QuizzComponent },
   { path: 'about', component: AboutComponent },
   { path: 'actus', component: ActusComponent },
 ];

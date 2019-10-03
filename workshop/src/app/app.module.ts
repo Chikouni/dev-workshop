@@ -32,7 +32,7 @@ import { QuizzComponent } from './components/quizz/quizz.component';
     DetailDefiComponent,
     AboutComponent,
     ActusComponent,
-    QuizzComponent
+    QuizzComponent,
     ContactComponent,
     DetailDefiSuccessComponent
   ],
