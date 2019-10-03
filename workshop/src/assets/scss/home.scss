@@ -13,6 +13,8 @@
     }
 }
 
+div.menu-container .tache {}
+
 div.menu-container {
     .image-menu {
     background-size: cover;
@@ -78,22 +80,22 @@ div.menu-container {
             text-align: left;
             font-size: 24px;
             font-weight: bold;
-            color: $text-primary-color;
+            color: $text-secondary-color;
             text-transform: uppercase;
         }
         .data {
-            width: 70%;
+            width: 71%;
             span {
                 text-align: left;
                 font-size:  50px;
-                color: $primary-color;
+                color: $text-secondary-color;
                 margin-right: 10px;
                 font-weight: bold;
             }
             .blue {
                 text-align: left;
                 font-size:  21px;
-                color: $primary-color;
+                color: $text-secondary-color;
                 font-weight: bold;
                 display: inline;
             }
@@ -102,7 +104,7 @@ div.menu-container {
                 font-size: 14px;
                 font-weight: lighter;
                 letter-spacing: 0;
-                color: $text-primary-color;
+                color: $text-secondary-color;
             }
         }
     }
