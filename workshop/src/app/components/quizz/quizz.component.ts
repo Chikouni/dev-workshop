@@ -9,7 +9,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class QuizzComponent implements OnInit {
   questions:any;
   iterate:number = 0;
-  notAttempted:any;
   correct:any;
   isShow:boolean = false;
   score:number = 0;

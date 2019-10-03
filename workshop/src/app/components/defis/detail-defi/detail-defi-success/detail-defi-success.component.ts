@@ -10,14 +10,25 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailDefiSuccessComponent implements OnInit {
   id: number;
   defi: Defi;
+  private userData = localStorage.getItem('caeliUserData');
+  private
+  currentLevel = 0;
 
-  constructor(private route: ActivatedRoute, private defisService: DefisService) { }
+  constructor(private route: ActivatedRoute, private defisService: DefisService) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {this.id = +params['id']});
     this.defisService.getDefis().subscribe(defis => {
       this.defi = defis[this.id];
       console.log(this.defi);
-  })
-}
+    })
+    this.currentLevel = this.id + 1;
+    var newScore = {
+      name: JSON.parse(this.userData).name,
+      email: JSON.parse(this.userData).email,
+      score: JSON.parse(this.userData).score,
+      level: this.currentLevel.toString()
+    };
+    localStorage.setItem('caeliUserData', JSON.stringify(newScore));
+  }
 }
