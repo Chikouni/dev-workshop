@@ -22,7 +22,8 @@
       border: 0px;
       position: relative;
       width: 294px;
-    height: 219px;
+      height: 219px;
+      margin: auto;   
       @include border-radius(20px);
       .card-img {
         @include border-radius(20px);
