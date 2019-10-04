@@ -27,7 +27,13 @@ width = 39 ;
     this.defisService.getDefis().subscribe(defis => {
       this.defis = defis;
     })
-    if(this.currentLvl > 1){
+    if(this.currentLvl == 0){
+      this.width = 39;
+    }
+    else if(this.currentLvl == 1){
+      this.width = 78;
+    }
+    else if(this.currentLvl > 1){
       this.width = this.currentLvl*33;
     }
   }
